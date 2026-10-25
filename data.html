@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Data and methods · Border Check</title>
+<meta name="site-name" content="Border Check">
+<meta name="description" content="Every figure on Border Check, with its period, source, comparability and when it was last checked.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="data">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">Border<span>/</span>Check</span><span class="brand-sub">NHS Scotland and England, compared</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Overview</a>
+      <a href="myth.html#m1">Myths</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="data.html" aria-current="page">Data and methods</a>
+      <a href="updates.html">Updates</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Data and methods</div>
+      <h1>Every figure, with its source</h1>
+      <p class="lede">This table is the site’s single source of truth. Every page and share card reads from it. Download it, check it, and tell us if anything looks wrong.</p>
+      <p class="stamp">Figures last checked: <span data-last-updated>…</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="controls">
+        <div class="field"><label for="f-search">Search</label><input type="search" id="f-search" placeholder="e.g. cancer, A&amp;E, IFS"></div>
+        <div class="field"><label for="f-topic">Topic</label><select id="f-topic"></select></div>
+        <div class="field"><label for="f-compare">Comparability</label>
+          <select id="f-compare">
+            <option value="">Any</option>
+            <option value="yes">Comparable</option>
+            <option value="caution">Compare with care</option>
+            <option value="no">Not comparable</option>
+          </select>
+        </div>
+        <a class="btn secondary" href="data/figures.csv">Download CSV</a>
+      </div>
+      <p class="status" id="data-count" role="status"></p>
+      <div class="table-box">
+        <table>
+          <thead><tr><th scope="col">Measure</th><th scope="col">Scotland</th><th scope="col">England</th><th scope="col">Comparable?</th><th scope="col">Notes and source</th><th scope="col">Status</th></tr></thead>
+          <tbody id="data-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>How to read the comparisons</h2>
+      <ul>
+        <li><span class="badge yes">Comparable</span> Same definition in both countries, or a single figure with a clear meaning.</li>
+        <li><span class="badge caution">Compare with care</span> Similar measures with different definitions or dates. Fine for the broad picture, not for exact rankings.</li>
+        <li><span class="badge no">Not comparable</span> Measured in different ways. Compare the trend within each country, not the headline numbers.</li>
+      </ul>
+      <h2>Known differences between the two countries</h2>
+      <ul>
+        <li><strong>Waiting times.</strong> England measures the whole pathway from referral to treatment for people still waiting. Scotland reports separate stages: first outpatient appointment, then inpatient or day case treatment. The Office for National Statistics has concluded that waiting times cannot be reliably compared across the four UK nations.</li>
+        <li><strong>A&amp;E.</strong> Scotland’s headline figure covers all A&amp;E sites, including minor injury units. England’s figure here covers major (Type 1) departments only. Scotland’s emergency-department-only figure is lower than its all-site figure.</li>
+        <li><strong>Delayed discharge.</strong> Scotland counts people at a monthly census and reports bed days. England uses daily hospital returns and a newer discharge-ready-date dataset. Per-person rates are indicative.</li>
+        <li><strong>Spending.</strong> Figures are cash per person and are not adjusted for age, rurality or health need, all of which raise costs in Scotland.</li>
+        <li><strong>North East England.</strong> Used as a like-for-like comparator because its deprivation and industrial history are similar to Scotland’s. It is smaller and more urban, with no remote or island areas.</li>
+      </ul>
+      <h2>How figures are kept current</h2>
+      <p>Each figure records the publication it came from, how often that publication updates, and the date it was last checked. A figure shows “Check due” once its next release is likely to be out. See the <a href="updates.html">release calendar</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="data.html">Data and methods</a><a href="updates.html">Updates and corrections</a><a href="about.html">About and corrections policy</a><a href="data/figures.csv">Download the data (CSV)</a></nav>
+    <p>Independent analysis. Not affiliated with NHS Scotland, NHS England or any political party. Figures last checked <span data-last-updated>…</span>.</p>
+  </div>
+</footer>
+<script src="assets/charts.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

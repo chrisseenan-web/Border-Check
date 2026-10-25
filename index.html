@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Border Check</title>
+<meta name="site-name" content="Border Check">
+<meta name="description" content="NHS Scotland and NHS England compared on the evidence. Independent, sourced and kept up to date with each official data release.">
+<meta property="og:title" content="Border Check: NHS Scotland and England, compared on the evidence">
+<meta property="og:description" content="Scotland is better at getting you seen. England is better at getting you treated. Six common myths tested against the latest data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">Border<span>/</span>Check</span><span class="brand-sub">NHS Scotland and England, compared</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="myth.html#m1">Myths</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="data.html">Data and methods</a>
+      <a href="updates.html">Updates</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Myth vs evidence</div>
+      <h1>Which NHS does better, Scotland’s or England’s?</h1>
+      <p class="lede">Neither, overall. It depends which door you walk through. Every figure here comes from an official or independent source, carries its date, and is flagged when the two countries measure things differently.</p>
+      <p class="stamp">Figures last checked: <span data-last-updated>…</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The split result</h2>
+        <p>Scotland does better on access at the front door. England has recovered planned hospital care faster. On several measures they are much closer than politics suggests.</p>
+      </div>
+      <div class="key" style="margin-bottom:14px"><span><span class="dot scotland"></span>NHS Scotland</span><span><span class="dot england"></span>NHS England</span></div>
+      <div class="split" id="home-split"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="display:grid;gap:16px">
+      <p class="callout" id="home-twist"></p>
+      <p class="bottomline" id="home-bottom"></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Six myths, tested</h2>
+        <p>Each page sets out the claim, the verdict, the numbers behind it and what they can and can’t tell you.</p>
+      </div>
+      <div class="myth-grid" id="home-myths"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="myth-layout">
+        <div class="prose">
+          <h2 style="margin-top:0">Share the summary</h2>
+          <p>This graphic is built from the same data as the rest of the site, so it is always current. Download it as an image for social media. Each myth page has its own card too.</p>
+          <p>Please share the link alongside it, so people can see the sources and caveats.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <button class="btn" id="summary-download" type="button">Download summary image</button>
+            <a class="btn secondary" href="data.html">See all the data</a>
+          </div>
+          <p class="status" id="summary-status" role="status"></p>
+        </div>
+        <div class="card-col">
+          <div class="card-frame" id="summary-frame" aria-label="Summary graphic preview"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="data.html">Data and methods</a><a href="updates.html">Updates and corrections</a><a href="about.html">About and corrections policy</a><a href="data/figures.csv">Download the data (CSV)</a></nav>
+    <p>Independent analysis. Not affiliated with NHS Scotland, NHS England or any political party. Figures last checked <span data-last-updated>…</span>.</p>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

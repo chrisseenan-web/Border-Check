@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dashboard · Border Check</title>
+<meta name="site-name" content="Border Check">
+<meta name="description" content="Latest figures and trends for NHS Scotland and NHS England.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="dashboard">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">Border<span>/</span>Check</span><span class="brand-sub">NHS Scotland and England, compared</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Overview</a>
+      <a href="myth.html#m1">Myths</a>
+      <a href="dashboard.html" aria-current="page">Dashboard</a>
+      <a href="data.html">Data and methods</a>
+      <a href="updates.html">Updates</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Dashboard</div>
+      <h1>The latest numbers, side by side</h1>
+      <p class="lede">Headline figures for both countries, and how key measures are moving. Each figure shows whether a fair direct comparison is possible.</p>
+      <p class="stamp">Figures last checked: <span data-last-updated>…</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><h2>Headline figures</h2></div>
+      <div class="key" style="margin-bottom:14px"><span><span class="dot scotland"></span>NHS Scotland</span><span><span class="dot england"></span>NHS England</span><span><span class="badge yes">Comparable</span></span><span><span class="badge caution">Compare with care</span></span><span><span class="badge no">Not comparable</span></span></div>
+      <div class="kpis" id="dash-kpis"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Trends</h2>
+        <p>Charts show the months and quarters checked so far. Each new release adds a point. Hover over a point for its value.</p>
+      </div>
+      <div class="chart-grid" id="dash-charts"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="data.html">Data and methods</a><a href="updates.html">Updates and corrections</a><a href="about.html">About and corrections policy</a><a href="data/series.csv">Download trend data (CSV)</a></nav>
+    <p>Independent analysis. Not affiliated with NHS Scotland, NHS England or any political party. Figures last checked <span data-last-updated>…</span>.</p>
+  </div>
+</footer>
+<script src="assets/charts.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
