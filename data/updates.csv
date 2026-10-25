@@ -1,0 +1,7 @@
+date,type,summary,figures
+2026-10-16,Launch,"First version. All figures checked against Public Health Scotland, NHS England (via the House of Commons Library), IFS, Audit Scotland, ONS, NRS, Nuffield Trust, Health Foundation and King's Fund sources.",all
+2026-10-16,Correction,"England's share of waits over a year updated to about 1.5% (Aug 2026). An earlier draft used an older 3.5% figure.",long_waits
+2026-10-16,Correction,"Scotland's long waits updated to May 2026. An earlier draft used December 2025 figures, before a large fall.",long_waits;long_waits_change
+2026-10-16,Correction,"Delayed discharge comparison revised. Per person, Scotland has roughly twice England's rate, not the same rate.",delayed_per_100k
+2026-10-16,Clarification,"Free personal care pays a fixed weekly sum in care homes. Accommodation costs are still means-tested.",fpc_care_home
+2026-10-16,To do,"Some England 18-week trend points come from secondary reports of NHS England data. Replace with the NHS England RTT overview timeseries at the next update.",rtt_18wk
