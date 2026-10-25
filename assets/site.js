@@ -1,4 +1,4 @@
-/* Border Check: every page reads its numbers from the files in /data.
+/* Measured: every page reads its numbers from the files in /data.
    Change a value in data/figures.csv and it updates everywhere,
    including the share cards. */
 (function () {
@@ -129,7 +129,7 @@
       '<div class="sc-body"><div class="sc-lead">' + fillEsc(m.lead) + '</div>' +
       '<div class="sc-stats">' + m.card.map(statHTML).join('') + '</div>' +
       '<div class="sc-meaning"><b>What this means.</b> ' + fillEsc(m.meaning) + '</div>' +
-      '<div class="sc-foot"><span>Figures checked ' + esc(lastUpdated()) + '. Sources and caveats: see the full page.</span><span>' + esc(siteName()) + '</span></div></div>';
+      '<div class="sc-foot"><span>Figures checked ' + esc(lastUpdated()) + '. Sources and caveats: see the full page.</span><span>' + esc(siteUrl()) + '</span></div></div>';
     return d;
   }
 
@@ -148,13 +148,18 @@
       '<div class="sc-body" style="gap:20px">' +
       '<div class="sc-grid">' + col('Scotland is ahead at the front door', 'scotland', s.scotland_ahead) + col('England is ahead on planned care', 'england', s.england_ahead) + '</div>' +
       '<div class="sc-meaning" style="margin-top:0">' + esc(s.bottom_line) + '</div>' +
-      '<div class="sc-foot"><span>Measures differ between countries where noted on the site. Sources: IFS, Public Health Scotland, NHS England, ONS, NRS.</span><span>' + esc(siteName()) + '</span></div></div>';
+      '<div class="sc-foot"><span>Measures differ between countries where noted on the site. Sources: IFS, Public Health Scotland, NHS England, ONS, NRS.</span><span>' + esc(siteUrl()) + '</span></div></div>';
     return d;
+  }
+
+  function siteUrl() {
+    var m = document.querySelector('meta[name="site-url"]');
+    return m ? m.content : siteName();
   }
 
   function siteName() {
     var m = document.querySelector('meta[name="site-name"]');
-    return m ? m.content : 'Border Check';
+    return m ? m.content : 'Measured';
   }
 
   function mountCard(frame, card) {
@@ -365,5 +370,5 @@
     }).catch(showError);
   });
 
-  window.BorderCheck = { parseCSV: parseCSV, fill: fill, data: DATA };
+  window.Measured = { parseCSV: parseCSV, fill: fill, data: DATA };
 })();
