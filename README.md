@@ -1,8 +1,8 @@
-# Border Check
+# Measured
 
 A static website comparing NHS Scotland and NHS England on the evidence.
-"Border Check" is a working name. Change it in each page's `<title>`, the
-`site-name` meta tag and the header.
+Live at https://measuredhealth.org.uk (the `CNAME` file tells GitHub Pages to use this domain).
+The name appears in each page's `<title>`, the `site-name` and `site-url` meta tags and the header.
 
 ## How it works
 
@@ -38,10 +38,10 @@ Then visit http://localhost:8000.
 
 ## Publish on GitHub Pages (free)
 
-1. Create a GitHub account and a new public repository, for example `border-check`.
+1. Create a GitHub account and a new public repository, for example `Border-Check`.
 2. Upload everything inside the `site` folder to the repository (drag and drop works on github.com).
 3. In the repository, go to Settings, then Pages. Under "Build and deployment", choose "Deploy from a branch", pick `main` and `/ (root)`, and save.
-4. After a minute the site is live at `https://<your-username>.github.io/border-check/`.
+4. After a minute the site is live at `https://<your-username>.github.io/Border-Check/`.
 5. Optional: buy a domain and add it under Settings, Pages, Custom domain.
 
 Every time you commit a change to the data files, the live site updates within a minute or two. GitHub keeps the full history, which doubles as a public audit trail.
